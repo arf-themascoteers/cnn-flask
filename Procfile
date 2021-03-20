@@ -1,1 +1,1 @@
-web: gunicorn cnn-flask-demo:app
+web: gunicorn app:cnn-flask-demo

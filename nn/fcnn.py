@@ -24,8 +24,11 @@ class FCNN:
         self.output_layer.previous_layer = new_layer
 
     def print(self):
+        print("Forward")
         self.input_layer.print(1)
 
-
+    def print_backward(self):
+        print("Backward")
+        self.loss_layer.print_backward(1)
 
 

@@ -21,7 +21,11 @@ class Layer:
         pass
 
     def print(self, level):
-        print(f'({level} - {self.count_neuron})')
+        print(f'(Layer - {level} - Neurons {self.count_neuron})')
         if self.next_layer != None:
             self.next_layer.print(level+1)
 
+    def print_backward(self, level):
+        print(f'(Layer (from back) - {level} - Neurons {self.count_neuron})')
+        if self.previous_layer != None:
+            self.previous_layer.print_backward(level+1)

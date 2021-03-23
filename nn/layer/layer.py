@@ -14,8 +14,13 @@ class Layer:
         if self.next_layer != None:
             self.next_layer.forward(output)
 
-    def backward(self, output):
-        pass
+    def backward(self, back_input):
+        revised_value = self.backprop(back_input)
+        if self.previous_layer != None:
+            self.previous_layer.backwar(revised_value)
+
+    def backprop(self, back_input):
+        return 0
 
     @abstractmethod
     def get_output(self, input):

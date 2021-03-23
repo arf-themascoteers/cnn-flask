@@ -20,7 +20,7 @@ class WeightedLayer(Layer):
 
     def get_activation(self, input):
         biased_sums = self.get_biased_sums(input)
-        return self.activation.evaluate(biased_sums)
+        return self.activation.forward(biased_sums)
 
     def get_output(self, input):
         return self.get_activation(input)

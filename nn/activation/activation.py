@@ -2,9 +2,9 @@ from abc import ABC, abstractmethod
 
 class Activation:
     @abstractmethod
-    def evaluate(self,input):
+    def forward(self, input):
         pass
 
     @abstractmethod
-    def derivative(self, input):
+    def backward(self, input):
         pass

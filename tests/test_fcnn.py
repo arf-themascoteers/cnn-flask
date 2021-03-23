@@ -3,9 +3,10 @@ import unittest
 from nn.activation.relu import ReLU
 from nn.fcnn import FCNN
 
+
 class TestFCNN(unittest.TestCase):
     def test_something(self):
-        fcnn = FCNN(5,2)
+        fcnn = FCNN(5, 2)
         fcnn.print()
         fcnn.print_backward()
 

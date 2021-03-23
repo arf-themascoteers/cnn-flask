@@ -1,6 +1,6 @@
 import unittest
 
-from nn.relu import ReLU
+from nn.activation.relu import ReLU
 
 
 class TestReLU(unittest.TestCase):

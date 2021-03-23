@@ -1,6 +1,6 @@
 import unittest
 
-from nn.loss_layer import LossLayer
+from nn.layer.loss_layer import LossLayer
 
 class TestLossLayer(unittest.TestCase):
     def test_get_output(self):

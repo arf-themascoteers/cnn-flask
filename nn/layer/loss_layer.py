@@ -1,5 +1,4 @@
-from abc import ABC, abstractmethod
-from nn.layer import Layer
+from nn.layer.layer import Layer
 import math
 
 

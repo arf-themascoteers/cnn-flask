@@ -1,7 +1,6 @@
-from abc import ABC, abstractmethod
 from math import exp
 
-from nn.activation import Activation
+from nn.activation.activation import Activation
 
 class SoftMax(Activation):
     def evaluate(self,input):

@@ -1,6 +1,6 @@
 import unittest
 
-from nn.softmax import SoftMax
+from nn.activation.softmax import SoftMax
 
 
 class TestSoftMax(unittest.TestCase):

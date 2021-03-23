@@ -1,6 +1,4 @@
-from abc import ABC, abstractmethod
-
-from nn.activation import Activation
+from nn.activation.activation import Activation
 
 class ReLU(Activation):
     def evaluate(self,input):

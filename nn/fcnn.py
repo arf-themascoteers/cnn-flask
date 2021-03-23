@@ -1,7 +1,5 @@
-import numpy as np
-
-from nn.input_layer import InputLayer
-from nn.output_layer import OutputLayer
+from nn.layer.input_layer import InputLayer
+from nn.layer.output_layer import OutputLayer
 
 
 class FCNN:

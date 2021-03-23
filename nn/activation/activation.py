@@ -1,10 +1,11 @@
-from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod, ABCMeta
 
-class Activation:
-    @abstractmethod
-    def forward(self, input):
-        pass
+from nn.propagator.propagator import Propagator
 
-    @abstractmethod
-    def backward(self, input):
-        pass
+
+class Activation(Propagator, metaclass=ABCMeta):
+    def __init__(self, inputs):
+        super().__init__(inputs)
+
+
+

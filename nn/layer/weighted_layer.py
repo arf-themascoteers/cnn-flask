@@ -24,3 +24,6 @@ class WeightedLayer(Layer):
 
     def get_output(self, input):
         return self.get_activation(input)
+
+    def backprop(self, back_input):
+        self.weights = np.dot(back_input.T)

@@ -7,3 +7,6 @@ class InputLayer(Layer):
 
     def get_output(self, input):
         return input
+
+    def backprop(self, back_input):
+        pass

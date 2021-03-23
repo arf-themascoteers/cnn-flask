@@ -11,16 +11,25 @@ class Layer:
 
     def forward(self, input):
         output = self.get_output(input)
+        if self.activation != None:
+            output = self.activation.forward(output)
+
         if self.next_layer != None:
             self.next_layer.forward(output)
 
     def backward(self, back_input):
-        revised_value = self.backprop(back_input)
-        if self.previous_layer != None:
-            self.previous_layer.backwar(revised_value)
+        dinput = None
+        if self.activation != None:
+            dinput = self.activation.backward(back_input)
 
+        dinput = self.backprop(back_input)
+
+        if self.previous_layer != None:
+            self.previous_layer.backward(dinput)
+
+    @abstractmethod
     def backprop(self, back_input):
-        return 0
+        pass
 
     @abstractmethod
     def get_output(self, input):

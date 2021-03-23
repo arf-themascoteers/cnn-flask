@@ -8,3 +8,6 @@ class InputLayer(Layer):
 
     def start_forward(self):
         self.next_layer.forward(self.input)
+
+    def get_output(self, input):
+        return input

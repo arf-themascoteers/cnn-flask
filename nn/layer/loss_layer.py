@@ -5,7 +5,6 @@ import math
 class LossLayer(Layer):
     def __init__(self, output_layer):
         super().__init__(1, None, output_layer, None)
-        self.input = input
         self.expected_output = None
 
     def get_output(self, input):

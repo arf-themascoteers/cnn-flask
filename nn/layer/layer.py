@@ -20,4 +20,8 @@ class Layer:
     def get_output(self, input):
         pass
 
+    def print(self, level):
+        print(f'({level} - {self.count_neuron})')
+        if self.next_layer != None:
+            self.next_layer.print(level+1)
 

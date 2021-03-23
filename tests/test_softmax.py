@@ -1,6 +1,5 @@
 import unittest
 
-from nn.relu import ReLU
 from nn.softmax import SoftMax
 
 

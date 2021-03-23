@@ -9,7 +9,7 @@ class FCNN:
         self.count_input = count_input
         self.count_output = count_output
         self.input_layer = InputLayer(count_input)
-        self.output_layer = OutputLayer(count_output)
+        self.output_layer = OutputLayer(count_output, self.input_layer)
         self.loss_layer = LossLayer(self.output_layer)
         self.input_layer.next_layer = self.output_layer
         self.output_layer.previous_layer = self.input_layer
@@ -23,7 +23,7 @@ class FCNN:
         new_layer.next_layer = self.output_layer
         self.output_layer.previous_layer = new_layer
 
-    def print_nn(self):
+    def print(self):
         self.input_layer.print(1)
 
 

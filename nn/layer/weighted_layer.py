@@ -8,7 +8,7 @@ from nn.layer.layer import Layer
 class WeightedLayer(Layer):
     def __init__(self, count_neuron, activation, previous_layer, next_layer):
         super().__init__(count_neuron, activation, previous_layer, next_layer)
-        self.weights = np.ones(len(previous_layer), count_neuron)
+        self.weights = np.ones((previous_layer.count_neuron, count_neuron))
         self.biases = np.zeros(count_neuron)
 
     def get_weighted_sums(self, input):
